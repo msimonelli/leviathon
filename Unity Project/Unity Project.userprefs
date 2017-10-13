@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{907B5920-0084-E793-56BB-B0CD340359AA}|">
+  <MonoDevelop.Ide.ItemProperties.Unity_220Project PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Map.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Map.cs" Line="19" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
