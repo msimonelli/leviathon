@@ -185,6 +185,30 @@ http://docs.unity3d.com/Manual/TroubleShootingIPhone.html
 ORK Version Changelog
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version 2.14.1:
+- new: Control Maps: 'Only In Range' setting available when using 'Only Cursor Over Target' setting. Optionally only allow using the control map key when the cursor is over a valid target in use range of the action.
+- new: Status Values, HUDs: Value Bars: 'From Zero' setting available when using icons to display value bars. Optionally start the icon display from 0 instead of the minimum value. E.g. a current value of 4 would display 4 icons from zero, but 3 from a minimum value of 1.
+- new: Formula: Check Grid Distance: 'Block Diagonal Distance 1' setting available in 'Check Grid Distance' nodes. Optionally block diagonal distance of 1 for square grids in the distance checks.
+- new: Combatants: Portraits: 'Ignore Viewer Conditions' setting available in portraits using prefab view. Optionally ignore the display conditions of equipment viewers on the portrait prefab.
+- new: Battle AI: Check Grid Distance, Get Nearest, Distance Sort Targets: 'Block Diagonal Distance 1' setting available in 'Check Grid Distance', 'Get Nearest' and 'Distance Sort Targets' nodes. Optionally block diagonal distance of 1 for square grids in the distance checks.
+- new: Grid Battles: Examine: 'Show For Cells' settings available in 'Cell Info Box' settings. Define if the info box will be displayed for empty cells, occupied cells, marked cells (e.g. target of a grid move) or cells with guest combatants.
+- new: Grid Highlights, Grid Cell Types: Prefabs: 'Auto Add Blinker' setting available. Optionally add and initialize the blinker component used by grid highlights to blink the cell's prefab when the prefab is instantiated.
+- new: Menu Settings, GUI Boxes: GUI Skins: 'Limit To Scrollbar' setting available when using the new UI. Optionally disable scrolling by dragging and mouse wheel.
+- new: Event System: Check Grid Distance: 'Block Diagonal Distance 1' setting available in 'Check Grid Distance' nodes. Optionally block diagonal distance of 1 for square grids in the distance checks.
+- new: Event System: Remove Component, Enable Component: 'All Components' setting available. Optionally use all components on the game object and all of its child objects.
+- change: HUDs: Anchoring HUD elements to the previous element will now ignore empty HUD elements (unless using empty elements is enabled for the HUD).
+- change: Grid Battles: Performance improvements for player and AI grid move range/path calculations and blinking grid highlights.
+- fix: Event System: Move AI Start Position: Fixed an issue where the editor freezes and throws errors when disabling 'Use Current Position'.
+- fix: Status Values: Fixed an issue where 'Consumable' type status values using 'Real Value Count' that can cause the death of a combatant could kill the combatant again upon revive due to the counting value still being at the minimum/maximum that caused the death.
+- fix: Phase Battles: Player Combatant Selection: Fixed an issue where player combatant's couldn't be changed with click or input keys after the first action has been performed.
+- fix: Phase Battles: Player Combatant Selection: Fixed an issue where clicking on non-player group combatants while having a combatant selected would close the battle menu and open the combatant selection.
+- fix: Phase Battles: Fixed an issue where ending the phase with combatants still being available would lead to the combatant selection coming up again after the selected actions have been performed when not using active command.
+- fix: Phase Battles: Fixed an issue where combatants not having performed actions didn't receive any actions per turn or action time in the next round.
+- fix: Status Effects: Fixed an issue where blocking specific ability types, abilities, item types or items didn't work.
+- fix: Formulas: Equipment Durability: Fixed an issue where an equipment with durability of 0 had a maximum durability of 0 as well.
+- fix: GUI Box: Name Box: Fixed an issue where the name box could remain in the scene after closing the GUI box when using the new UI.
+
+
 Version 2.14.0:
 - new: Action Combos: 'Action Combos' sub-section available in 'Battle System > Action Combos'. Action combos define a sequence of battle actions (e.g. base attack, abilities or items), where each stage of the combo can optionally replace the used action with another. E.g. using ability A 3 times in a row will replace the 3rd use with ability B, i.e. A > A > A will become A > A > B.
 - new: Control Maps, AI Rulesets, Status Effects: 'Ability Level' settings available when using an ability action. Optionally define the level of the ability that should be used. By default uses the highest available level.
